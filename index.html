@@ -11,17 +11,7 @@
 <body>
   <div id="app">
     <h1>Todo app</h1>
-    <input type="text" class="input" v-model="value" @keydown.enter="addTodo">
-    <ul v-if="todos.length">
-      <li v-for="todo in todos"
-          :key="todo.id"
-          :todo="todo">
-          {{ todo.text }}
-          <button @click="removeTodo(todo.id)">
-            X
-          </button>
-        </li>
-    </ul>
+    <todo-list/>
   </div>
   <script src="./index.js"></script>
 </body>
